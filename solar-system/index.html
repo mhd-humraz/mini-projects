@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Planets Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🪐 Solar System Planets</h1>
+            <p class="subtitle">Explore the fascinating worlds in our cosmic neighborhood</p>
+        </header>
+
+        <div class="controls">
+            <button id="sortByName" class="btn">Sort by Name</button>
+            <button id="sortByDiameter" class="btn">Sort by Diameter</button>
+            <button id="sortByDistance" class="btn">Sort by Distance from Sun</button>
+            <button id="resetSort" class="btn reset">Reset Sort</button>
+        </div>
+
+        <div class="table-container">
+            <table id="planetTable">
+                <thead>
+                    <tr>
+                        <th>Planet</th>
+                        <th>Diameter (km)</th>
+                        <th>Distance from Sun (million km)</th>
+                        <th>Orbital Period (Earth days)</th>
+                        <th>Day Length (hours)</th>
+                        <th>Moons</th>
+                        <th>Surface Temperature (°C)</th>
+                        <th>Interesting Fact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Planet data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <p>Data sourced from NASA Planetary Fact Sheet</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

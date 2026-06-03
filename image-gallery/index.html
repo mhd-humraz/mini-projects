@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Image Gallery</h1>
+            <p>Explore beautiful images from different categories</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Filter Controls -->
+        <section class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="architecture">Architecture</button>
+            <button class="filter-btn" data-filter="food">Food</button>
+            <button class="filter-btn" data-filter="travel">Travel</button>
+        </section>
+
+        <!-- Search Box -->
+        <section class="search-section">
+            <input type="text" id="search-input" placeholder="Search images...">
+            <button id="search-btn">Search</button>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-grid" id="gallery">
+            <!-- Images will be dynamically inserted here -->
+        </section>
+
+        <!-- Load More Button -->
+        <section class="load-more-section">
+            <button id="load-more-btn">Load More Images</button>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="modal-caption" id="modal-caption"></div>
+        <button class="nav-btn" id="prev-btn">&#10094;</button>
+        <button class="nav-btn" id="next-btn">&#10095;</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Built with ❤️ using JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

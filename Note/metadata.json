@@ -1,0 +1,5 @@
+{
+  "name": "Smart Notes App",
+  "description": "A smart notes application that uses AI to automatically generate summaries, tags, and moods for your notes. It features local storage persistence, search with highlighting, sorting, pinning, and a clean, modern UI with light/dark modes.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mozilla - Building a Better Internet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff9500, #ff2a68, #9c27b0);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            font-size: 2.2rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 25px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding: 40px;
+            min-width: 300px;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #ff4400;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #444;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ff4400;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 68, 0, 0.4);
+        }
+        
+        .btn:hover {
+            background: #e03d00;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 68, 0, 0.5);
+        }
+        
+        .hero-media {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            object-fit: cover;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .feature-content {
+            padding: 25px;
+        }
+        
+        .feature-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff4400;
+        }
+        
+        .browser-showcase {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .browser-showcase h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff4400;
+        }
+        
+        .browsers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .browser {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .browser:hover {
+            transform: scale(1.05);
+        }
+        
+        .browser img {
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .browser h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .video-section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .video-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ff9500;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #ff9500;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #ff9500;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: white;
+            color: #ff9500;
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 0 10px;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .browser {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://www.mozilla.org/media/protocol/img/logos/mozilla/logo.eb1324e44442.svg" alt="Mozilla Logo">
+                <h1>Mozilla</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Firefox</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Innovation</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Building a Better Internet for All</h2>
+                <p>Mozilla is a global community of technologists, thinkers, and builders working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web.</p>
+                <a href="#" class="btn">Join the Movement</a>
+            </div>
+            <div class="hero-media">
+                <video class="hero-video" autoplay muted loop>
+                    <source src="https://assets.mozilla.net/video/firefox-browser-features-2022/hero-video.1a7f5729dd7a.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <img class="feature-img" src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Privacy">
+                <div class="feature-content">
+                    <h3>Privacy First</h3>
+                    <p>We believe your personal data belongs to you. Our products are designed to protect your privacy and give you control over your information.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <img class="feature-img" src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Open Source">
+                <div class="feature-content">
+                    <h3>Open Source</h3>
+                    <p>Our code is open for inspection, modification, and redistribution. We believe in transparency and community-driven development.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <img class="feature-img" src="https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Accessibility">
+                <div class="feature-content">
+                    <h3>Accessibility for All</h3>
+                    <p>We work to ensure the internet remains a public resource that is open and accessible to everyone, regardless of location or ability.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="browser-showcase">
+            <h2>Our Products</h2>
+            <div class="browsers">
+                <div class="browser">
+                    <img src="https://www.mozilla.org/media/protocol/img/logos/firefox/browser/logo.eb1324e44442.svg" alt="Firefox Browser">
+                    <h3>Firefox Browser</h3>
+                    <p>Fast, private and safe browser with tracking protection.</p>
+                </div>
+                
+                <div class="browser">
+                    <img src="https://www.mozilla.org/media/protocol/img/logos/firefox/browser/developer/logo.eb1324e44442.svg" alt="Firefox Developer">
+                    <h3>Firefox Developer</h3>
+                    <p>The only browser made just for developers.</p>
+                </div>
+                
+                <div class="browser">
+                    <img src="https://www.mozilla.org/media/protocol/img/logos/firefox/browser/nightly/logo.eb1324e44442.svg" alt="Firefox Nightly">
+                    <h3>Firefox Nightly</h3>
+                    <p>Test the future of web browsing with our experimental builds.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="video-section">
+            <h2>Our Mission in Action</h2>
+            <div class="video-container">
+                <video controls poster="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80">
+                    <source src="https://assets.mozilla.net/video/mozilla-manifesto/mozilla-manifesto-in-action.8e0b039d6c8a.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Mozilla</h3>
+                <p>Mozilla is a non-profit organization that believes the internet should be open, accessible and a global public resource.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Firefox Browser</a></li>
+                    <li><a href="#">Firefox for Mobile</a></li>
+                    <li><a href="#">Pocket</a></li>
+                    <li><a href="#">MDN Web Docs</a></li>
+                    <li><a href="#">Common Voice</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community Forums</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">File a Bug</a></li>
+                    <li><a href="#">Status Page</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Center</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Mozilla. Portions of this content are ©1998–2023 by individual mozilla.org contributors.</p>
+        </div>
+    </footer>
+</body>
+</html>

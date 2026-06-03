@@ -1,0 +1,6 @@
+Enter target URL: https://mescas.org/
+[+] Scanning URL: https://mescas.org/
+
+[+] Found 0 forms
+
+[+] Scan complete. Results saved to report.txt

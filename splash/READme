@@ -1,0 +1,102 @@
+# Mozilla Splash Page
+
+A modern, responsive splash page for Mozilla showcasing their mission, products, and multimedia content.
+
+## 📋 Project Overview
+
+This project demonstrates the implementation of a visually appealing splash page for Mozilla using HTML5 and CSS3, with a focus on multimedia integration and responsive design.
+
+## 🚀 Features
+
+- **Modern Design**: Vibrant gradient background with clean, card-based layout
+- **Responsive Layout**: Adapts seamlessly to different screen sizes using flexbox and CSS grid
+- **Multimedia Integration**:
+  - Hero section with autoplay background video
+  - Feature cards with relevant imagery
+  - Product showcase with official Mozilla browser icons
+  - Mission video with player controls
+- **Interactive Elements**:
+  - Hover effects on navigation, buttons, and cards
+  - Animated social media icons
+  - Smooth transitions and transformations
+
+## 🛠️ Technologies Used
+
+- **HTML5**: Semantic structure with video elements
+- **CSS3**: Modern styling with flexbox, grid, and animations
+- **Font Awesome**: For social media icons
+- **External Assets**: Mozilla official logos and videos
+
+## 📁 File Structure
+
+```
+mozilla-splash-page/
+│
+├── index.html          # Main HTML file
+├── README.md           # Project documentation
+└── assets/             # (Optional) Local assets folder
+    ├── images/
+    └── videos/
+```
+
+## 🎯 Key Sections
+
+1. **Header**: Navigation with Mozilla logo
+2. **Hero Section**: Mission statement with background video
+3. **Features**: Three key Mozilla principles with images
+4. **Product Showcase**: Firefox browser variants
+5. **Mission Video**: Embedded video with controls
+6. **Footer**: Comprehensive links and social media
+
+## 📱 Responsive Design
+
+The page is fully responsive and optimized for:
+- Desktop computers
+- Tablets
+- Mobile devices
+
+## 🎨 Design Elements
+
+- **Color Scheme**: Mozilla-branded oranges and purples with gradient backgrounds
+- **Typography**: Clean, readable fonts with proper hierarchy
+- **Visual Effects**: Box shadows, hover animations, and smooth transitions
+- **Layout**: Card-based design with consistent spacing
+
+## 🔧 Implementation Details
+
+### Multimedia Features:
+- `<video>` tags with multiple source formats
+- Autoplay muted background video
+- Controlled video player with poster image
+- Optimized images with proper alt text
+
+### CSS Techniques:
+- CSS Grid and Flexbox for layouts
+- CSS transitions and transforms
+- Media queries for responsiveness
+- Gradient backgrounds and box shadows
+
+## 📝 Learning Outcomes
+
+This project demonstrates:
+- Proper HTML5 semantic structure
+- CSS3 advanced styling techniques
+- Responsive web design principles
+- Multimedia embedding and optimization
+- Interactive UI/UX design patterns
+
+## 🌐 Browser Compatibility
+
+Tested and compatible with modern browsers including:
+- Firefox
+- Chrome
+- Safari
+- Edge
+
+## 📄 License
+
+This project is for educational purposes. Mozilla logos and branding are property of Mozilla Foundation.
+
+---
+
+ 

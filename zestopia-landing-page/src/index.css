@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ZESTOPIA - Premium Dark Theme */
+
+@layer base {
+  :root {
+    --background: 230 25% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 230 20% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 230 20% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 265 90% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 95% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 15% 14%;
+    --muted-foreground: 230 10% 52%;
+
+    --accent: 175 75% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 230 15% 12%;
+    --input: 230 15% 14%;
+    --ring: 265 90% 58%;
+
+    --radius: 0.875rem;
+
+    --sidebar-background: 230 20% 6%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 265 90% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 95% 58%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 15% 12%;
+    --sidebar-ring: 265 90% 58%;
+
+    --chart-1: 265 90% 58%;
+    --chart-2: 215 95% 58%;
+    --chart-3: 175 75% 42%;
+    --chart-4: 330 80% 58%;
+    --chart-5: 45 100% 55%;
+
+    /* Custom tokens */
+    --glow-primary: 265 90% 58%;
+    --glow-secondary: 215 95% 58%;
+    --glow-accent: 175 75% 42%;
+    --gradient-start: 265 90% 58%;
+    --gradient-mid: 240 80% 55%;
+    --gradient-end: 215 95% 58%;
+    --card-hover: 230 20% 11%;
+
+    --font-display: 'Orbitron', sans-serif;
+    --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 230 25% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 230 20% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 230 20% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 265 90% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 95% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 15% 14%;
+    --muted-foreground: 230 10% 52%;
+
+    --accent: 175 75% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 230 15% 12%;
+    --input: 230 15% 14%;
+    --ring: 265 90% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-glow-primary {
+    text-shadow: 0 0 20px hsl(var(--glow-primary) / 0.5), 
+                 0 0 40px hsl(var(--glow-primary) / 0.3),
+                 0 0 60px hsl(var(--glow-primary) / 0.15);
+  }
+  
+  .text-glow-secondary {
+    text-shadow: 0 0 20px hsl(var(--glow-secondary) / 0.5), 
+                 0 0 40px hsl(var(--glow-secondary) / 0.3);
+  }
+  
+  .box-glow-primary {
+    box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.25),
+                0 0 40px hsl(var(--glow-primary) / 0.1),
+                inset 0 1px 0 hsl(var(--glow-primary) / 0.1);
+  }
+  
+  .box-glow-secondary {
+    box-shadow: 0 0 20px hsl(var(--glow-secondary) / 0.25),
+                0 0 40px hsl(var(--glow-secondary) / 0.1);
+  }
+  
+  .box-glow-accent {
+    box-shadow: 0 0 20px hsl(var(--glow-accent) / 0.25),
+                0 0 40px hsl(var(--glow-accent) / 0.1);
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-mid)), hsl(var(--gradient-end)));
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+  }
+
+  .card-premium {
+    background: linear-gradient(160deg, hsl(var(--card)), hsl(var(--card-hover)));
+    border: 1px solid hsl(var(--border) / 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-premium:hover {
+    border-color: hsl(var(--primary) / 0.35);
+    box-shadow: 0 0 30px hsl(var(--glow-primary) / 0.12),
+                0 12px 40px hsl(var(--background) / 0.8);
+    transform: translateY(-6px);
+  }
+  
+  .gradient-border {
+    position: relative;
+    background: hsl(var(--card));
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.4), hsl(var(--secondary) / 0.4));
+    z-index: -1;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+}

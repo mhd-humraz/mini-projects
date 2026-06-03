@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #16a085;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section {
+            margin: 20px 0;
+        }
+        h2 {
+            color: #16a085;
+        }
+        .products {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+        .product img {
+            width: 100px;
+            height: 100px;
+        }
+        footer {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>Supermarket</header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section id="home">
+        <h2>Welcome to Our Supermarket</h2>
+        <p>We offer a variety of fresh and quality products at the best prices.</p>
+    </section>
+    
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/apples-at-farmers-market-royalty-free-image-1627321463.jpg?crop=0.796xw:1.00xh;0.103xw,0&resize=1200:*" alt="Apple">
+                <p>Fresh Apples - $2.99/kg</p>
+            </div>
+            <div class="product">
+                <img src="https://www.google.com/search?q=milk&sca_esv=1fe3e7095f1a8e23&udm=2&biw=1045&bih=700&sxsrf=AHTn8zq73g0dEi19jqfReOpoGbBUNFSU4w%3A1743094831008&ei=L4TlZ9kc1-Dj4Q-8qvrYCA&ved=0ahUKEwiZ8Nih3qqMAxVX8DgGHTyVHosQ4dUDCBE&uact=5&oq=milk&gs_lp=EgNpbWciBG1pbGsyDRAAGIAEGLEDGEMYigUyChAAGIAEGEMYigUyDRAAGIAEGLEDGEMYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyCBAAGIAEGLEDMgoQABiABBhDGIoFSPcVUABYpw9wAHgAkAEAmAGSC6AB6iiqAQszLTEuMC4yLjAuM7gBA8gBAPgBAZgCBaACgiLCAgcQIxgnGMkCwgIQEAAYgAQYsQMYQxiDARiKBZgDAJIHCzMtMS4xLjEuMC4yoAexH7IHCzMtMS4xLjEuMC4yuAeCIg&sclient=img#vhid=VHscrjgXsLLBcM&vssid=mosaic" alt="Milk">
+                <p>Organic Milk - $1.99/L</p>
+            </div>
+            <div class="product">
+                <img src="https://www.google.com/search?q=bread&sca_esv=1fe3e7095f1a8e23&udm=2&biw=1045&bih=700&sxsrf=AHTn8zqve4fJqct6mexDJOlfrMb239qKKQ%3A1743095085119&ei=LYXlZ63_BrDa2roP-tCFcA&ved=0ahUKEwjtye6a36qMAxUwrVYBHXpoAQ4Q4dUDCBE&uact=5&oq=bread&gs_lp=EgNpbWciBWJyZWFkMg0QABiABBixAxhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMg0QABiABBixAxhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFSKEhUABY6RpwAXgAkAEAmAGCBaABkQ-qAQswLjEuMi4yLjAuMbgBA8gBAPgBAZgCB6AClRCoAgrCAgcQIxgnGMkCwgIKECMYJxjJAhjqAsICEBAAGIAEGLEDGEMYgwEYigXCAggQABiABBixA5gDG5IHCzEuMS4yLjIuMC4xoAfYILIHCzAuMS4yLjIuMC4xuAf6Dw&sclient=img#vhid=uQA_5KyT8gzZeM&vssid=mosaic" alt="Bread">
+                <p>Whole Wheat Bread - $2.49</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:contact@supermarket.com">contact@supermarket.com</a></p>
+        <p>Phone: +91 9876543210</p>
+    </section>
+    
+    <footer>
+        &copy; 2025 Supermarket. All rights reserved.
+    </footer>
+</body>
+</html>

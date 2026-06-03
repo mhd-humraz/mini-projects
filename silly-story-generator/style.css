@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.emoji {
+  font-size: 1.2em;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.radio-group {
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.radio-options {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#generate {
+  background-color: #3498db;
+  color: white;
+  margin-right: 10px;
+}
+
+#generate:hover {
+  background-color: #2980b9;
+}
+
+.secondary-btn {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  margin-right: 10px;
+}
+
+.secondary-btn:hover {
+  background-color: #bdc3c7;
+}
+
+.story-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.story {
+  white-space: pre-line;
+  visibility: hidden;
+}
+
+.story-meta {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #7f8c8d;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .radio-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

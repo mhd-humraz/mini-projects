@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Bouncing Balls Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Enhanced Bouncing Balls Demo</h1>
+            <div class="controls">
+                <button id="addBall">Add Ball</button>
+                <button id="clearBalls">Clear All</button>
+                <button id="gravityToggle">Gravity: ON</button>
+                <button id="trailsToggle">Trails: OFF</button>
+                <button id="collisionToggle">Collisions: ON</button>
+            </div>
+            <div class="stats">
+                <span>Balls: <span id="ballCount">0</span></span>
+                <span>FPS: <span id="fpsCounter">0</span></span>
+            </div>
+        </header>
+        
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+            <div class="instructions">
+                <p>Click anywhere to add a ball • Drag balls to throw them</p>
+            </div>
+        </div>
+        
+        <div class="ball-types">
+            <h3>Ball Types:</h3>
+            <div class="type-buttons">
+                <button class="type-btn active" data-type="normal">Normal</button>
+                <button class="type-btn" data-type="bouncy">Bouncy</button>
+                <button class="type-btn" data-type="heavy">Heavy</button>
+                <button class="type-btn" data-type="bubble">Bubble</button>
+                <button class="type-btn" data-type="fire">Fire</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ball.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

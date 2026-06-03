@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Phase Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a192f 0%, #1a365d 100%);
+            color: #e6e6ff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #e6e6ff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .moon-display {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .moon-canvas {
+            width: 250px;
+            height: 250px;
+            margin: 20px 0;
+        }
+        
+        .moon-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .moon-phase-name {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #a3bffa;
+        }
+        
+        .moon-phase-date {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .moon-stats {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #a3bffa;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .controls {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .control-group {
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #a3bffa;
+        }
+        
+        .date-picker {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        input[type="date"] {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+            color: white;
+            flex: 1;
+        }
+        
+        button {
+            background: #4a5568;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #2d3748;
+        }
+        
+        .location-input {
+            display: flex;
+            gap: 10px;
+        }
+        
+        input[type="text"] {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+            color: white;
+            flex: 1;
+        }
+        
+        .phases-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+        
+        .phase-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .phase-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .phase-item.active {
+            background: rgba(163, 191, 250, 0.2);
+            border: 1px solid #a3bffa;
+        }
+        
+        .phase-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .moon-display, .controls {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Moon Phase Tracker</h1>
+            <p class="tagline">Track the moon's journey through its phases</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="moon-display">
+                <canvas id="moon-canvas" class="moon-canvas" width="250" height="250"></canvas>
+                
+                <div class="moon-info">
+                    <div class="moon-phase-name">Waxing Gibbous</div>
+                    <div class="moon-phase-date">September 15, 2023</div>
+                </div>
+                
+                <div class="moon-stats">
+                    <div class="stat">
+                        <div class="stat-value">78%</div>
+                        <div class="stat-label">Illumination</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">10 days</div>
+                        <div class="stat-label">Age</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">Set: 3:42 AM</div>
+                        <div class="stat-label">Rise: 5:18 PM</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <h2>Select Date</h2>
+                    <div class="date-picker">
+                        <input type="date" id="date-selector" value="2023-09-15">
+                        <button id="today-btn">Today</button>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h2>Location</h2>
+                    <div class="location-input">
+                        <input type="text" id="location-input" placeholder="Enter city or coordinates">
+                        <button id="location-btn"><i class="fas fa-location-arrow"></i></button>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h2>Moon Phases</h2>
+                    <div class="phases-list">
+                        <div class="phase-item active">
+                            <div class="phase-icon">🌑</div>
+                            <div>New Moon</div>
+                        </div>
+                        <div class="phase-item">
+                            <div class="phase-icon">🌓</div>
+                            <div>First Quarter</div>
+                        </div>
+                        <div class="phase-item">
+                            <div class="phase-icon">🌕</div>
+                            <div>Full Moon</div>
+                        </div>
+                        <div class="phase-item">
+                            <div class="phase-icon">🌗</div>
+                            <div>Last Quarter</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h2>Next Events</h2>
+                    <ul id="events-list" style="list-style-type: none;">
+                        <li style="margin-bottom: 10px;">Full Moon: Sep 29, 2023</li>
+                        <li style="margin-bottom: 10px;">New Moon: Oct 14, 2023</li>
+                        <li style="margin-bottom: 10px;">First Quarter: Oct 21, 2023</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Created with ❤️ | Moon Phase Tracker © 2023</p>
+        </footer>
+    </div>
+
+    <script>
+        // Canvas drawing for moon phase
+        const canvas = document.getElementById('moon-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        function drawMoonPhase(phase) {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw full moon circle
+            ctx.beginPath();
+            ctx.arc(canvas.width / 2, canvas.height / 2, 100, 0, Math.PI * 2);
+            ctx.fillStyle = '#e6e6ff';
+            ctx.fill();
+            
+            // Draw shadow based on phase (0 = new moon, 1 = full moon)
+            if (phase > 0) {
+                // For waxing phases (0 to 0.5)
+                if (phase <= 0.5) {
+                    const shadowWidth = 200 * phase;
+                    ctx.beginPath();
+                    ctx.ellipse(canvas.width / 2 - (100 - shadowWidth), canvas.height / 2, 100 - shadowWidth, 100, 0, 0, Math.PI * 2);
+                    ctx.fillStyle = '#0a192f';
+                    ctx.fill();
+                } 
+                // For waning phases (0.5 to 1)
+                else {
+                    const shadowWidth = 200 * (phase - 0.5);
+                    ctx.beginPath();
+                    ctx.ellipse(canvas.width / 2 + (100 - shadowWidth), canvas.height / 2, 100 - shadowWidth, 100, 0, 0, Math.PI * 2);
+                    ctx.fillStyle = '#0a192f';
+                    ctx.fill();
+                }
+            }
+            
+            // Add craters for realism
+            drawCraters();
+        }
+        
+        function drawCraters() {
+            // Draw some random craters
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+            
+            // Large crater
+            ctx.beginPath();
+            ctx.arc(130, 100, 15, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Medium crater
+            ctx.beginPath();
+            ctx.arc(160, 150, 10, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Small crater
+            ctx.beginPath();
+            ctx.arc(100, 170, 8, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Another medium crater
+            ctx.beginPath();
+            ctx.arc(120, 70, 12, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        // Initialize with waxing gibbous moon (phase ~0.78)
+        drawMoonPhase(0.78);
+        
+        // Event listeners for interactivity
+        document.getElementById('today-btn').addEventListener('click', function() {
+            document.getElementById('date-selector').valueAsDate = new Date();
+            updateMoonPhase();
+        });
+        
+        document.getElementById('date-selector').addEventListener('change', updateMoonPhase);
+        
+        document.getElementById('location-btn').addEventListener('click', function() {
+            alert('Location feature would be implemented in a complete version.');
+        });
+        
+        // Add click events to phase items
+        const phaseItems = document.querySelectorAll('.phase-item');
+        phaseItems.forEach(item => {
+            item.addEventListener('click', function() {
+                phaseItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update moon phase visualization based on selection
+                const phaseText = this.querySelector('div:last-child').textContent;
+                let phaseValue = 0.5;
+                
+                if (phaseText === 'New Moon') phaseValue = 0;
+                else if (phaseText === 'First Quarter') phaseValue = 0.25;
+                else if (phaseText === 'Full Moon') phaseValue = 0.5;
+                else if (phaseText === 'Last Quarter') phaseValue = 0.75;
+                
+                drawMoonPhase(phaseValue);
+                
+                // Update stats
+                document.querySelector('.moon-phase-name').textContent = phaseText;
+                document.querySelector('.stat-value').textContent = 
+                    phaseValue === 0 ? '0%' : phaseValue === 0.25 ? '50%' : 
+                    phaseValue === 0.5 ? '100%' : '50%';
+            });
+        });
+        
+        function updateMoonPhase() {
+            // In a real implementation, this would calculate the moon phase based on the selected date
+            // For this example, we'll just use a random value
+            const randomPhase = Math.random();
+            drawMoonPhase(randomPhase);
+            
+            // Update phase name based on random value
+            let phaseName = '';
+            if (randomPhase < 0.25) phaseName = 'Waxing Crescent';
+            else if (randomPhase < 0.5) phaseName = 'Waxing Gibbous';
+            else if (randomPhase < 0.75) phaseName = 'Waning Gibbous';
+            else phaseName = 'Waning Crescent';
+            
+            document.querySelector('.moon-phase-name').textContent = phaseName;
+            document.querySelector('.stat-value').textContent = Math.round(randomPhase * 100) + '%';
+            
+            // Update date display
+            const selectedDate = new Date(document.getElementById('date-selector').value);
+            document.querySelector('.moon-phase-date').textContent = selectedDate.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        }
+    </script>
+</body>
+  </html>

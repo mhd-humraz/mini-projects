@@ -1,0 +1,5 @@
+{
+  "name": "AI Roast Machine",
+  "description": "A fun React web app that gives funny Manglish (Malayalam + English) roasts to users based on their input, powered by the Gemini API.",
+  "requestFramePermissions": []
+}

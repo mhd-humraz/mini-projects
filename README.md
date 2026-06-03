@@ -20,7 +20,17 @@
 
 ---
 
- 
+ ## 📖 About
+
+This repository is a collection of mini projects, experiments, and practice applications developed throughout my learning journey in web development.
+
+It includes projects built using HTML, CSS, JavaScript, and React, covering topics such as UI design, animations, responsive layouts, DOM manipulation, games, and interactive web applications.
+
+The purpose of this repository is to document my progress, strengthen development skills, explore new concepts, and maintain an organized archive of projects created while learning and experimenting with modern web technologies.
+
+Each project represents a step in my growth as a developer and reflects my continuous effort to learn, build, and improve.
+
+---
 
 ## 🗂️ Project Categories
 

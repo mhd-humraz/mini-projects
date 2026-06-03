@@ -2,197 +2,225 @@
 
 <div align="center">
 
-### A collection of frontend experiments, mini applications, UI components, animations, and learning projects.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Mini%20Projects&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=A%20collection%20of%20frontend%20experiments%20%26%20web%20applications&descAlignY=55&descSize=16" width="100%"/>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/mhd-humraz/mini-projects)
-![GitHub last commit](https://img.shields.io/github/last-commit/mhd-humraz/mini-projects)
-![GitHub stars](https://img.shields.io/github/stars/mhd-humraz/mini-projects?style=social)
-![GitHub forks](https://img.shields.io/github/forks/mhd-humraz/mini-projects?style=social)
+<br/>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&width=600&lines=50%2B+Projects+%26+Counting...;HTML+%7C+CSS+%7C+JavaScript+%7C+React;Building+Skills+One+Project+at+a+Time+%F0%9F%9A%80)](https://git.io/typing-svg)
+
+<br/>
+
+![GitHub repo size](https://img.shields.io/github/repo-size/mhd-humraz/mini-projects?style=for-the-badge&logo=github&color=6C63FF)
+![GitHub last commit](https://img.shields.io/github/last-commit/mhd-humraz/mini-projects?style=for-the-badge&logo=git&color=FF6B6B)
+![GitHub stars](https://img.shields.io/github/stars/mhd-humraz/mini-projects?style=for-the-badge&logo=github&color=FFD93D)
+![GitHub forks](https://img.shields.io/github/forks/mhd-humraz/mini-projects?style=for-the-badge&logo=github&color=6BCB77)
+![Profile views](https://komarev.com/ghpvc/?username=mhd-humraz&style=for-the-badge&color=blueviolet)
 
 </div>
 
 ---
 
-## 📖 About
+ 
 
-This repository contains a collection of projects built during my journey as a developer. These projects range from simple HTML/CSS experiments to JavaScript applications, UI components, animations, and frontend development practice projects.
+## 🗂️ Project Categories
 
-The goal of this repository is to:
+<div align="center">
 
-- 📚 Document my learning journey
-- 🧠 Practice frontend development concepts
-- 🎨 Explore UI/UX design ideas
-- ⚡ Build interactive web applications
-- 🚀 Continuously improve development skills
+| Category | Count | Technologies |
+|:---|:---:|:---|
+| 🌐 HTML & CSS | ~15 | HTML5, CSS3, Flexbox, Grid |
+| ⚡ JavaScript | ~12 | Vanilla JS, DOM, APIs |
+| ⚛️ React | ~5 | React, TypeScript, Hooks |
+| 🎨 UI Components & Animations | ~10 | CSS Animations, SCSS |
+| 🛠️ Full-stack / Other | ~8 | Python, Java, Node |
 
----
-
-## 📂 Repository Structure
-
-```text
-mini-projects/
-│
-├── html-css/
-│   ├── profile-card/
-│   ├── biography-page/
-│   ├── error-page/
-│   ├── markup-letter/
-│   └── ...
-│
-├── javascript/
-│   ├── calculator/
-│   ├── guessing-game/
-│   ├── memory-game/
-│   ├── tic-tac-toe/
-│   ├── quiz-app/
-│   └── ...
-│
-├── react/
-│   ├── react-tic-tac-toe/
-│   └── ...
-│
-├── animations/
-│   ├── loading-animation/
-│   ├── scroll-animation/
-│   └── ...
-│
-├── ui-components/
-│   ├── animated-border/
-│   ├── profile-components/
-│   └── ...
-│
-└── README.md
-```
+</div>
 
 ---
 
 ## 🌐 HTML & CSS Projects
 
-Projects focused on layout design, styling, responsiveness, and frontend fundamentals.
+> Layout design, styling, responsiveness, and frontend fundamentals.
 
-### Examples
+<details>
+<summary><b>View projects</b></summary>
 
-- Profile Card
-- Biography Page
-- Error Page
-- Markup Letter
-- Responsive Layouts
-- Landing Pages
-- UI Components
+<br/>
+
+| Project | Description | Live |
+|:---|:---|:---:|
+| [Profile Card](./profile-card) | Responsive user profile card with hover effects | — |
+| [Biography Page](./biography-page) | Structured personal bio layout | — |
+| [Resume HTML/CSS](./resume-html-css) | Clean printable resume built in pure HTML/CSS | — |
+| [Error Page](./error-page) | Custom 404 error page design | — |
+| [Markup Letter](./markup-letter) | Semantic HTML letter with proper structure | — |
+| [Facebook Clone](./facebook-clone) | Facebook UI clone — layout & styling practice | — |
+| [Community School](./Community-school) | School website landing page | — |
+| [Supermarket Website](./supermarket-website) | E-commerce landing page UI | — |
+| [Zestopia Landing Page](./zestopia-landing-page) | Modern product landing page | — |
+| [Grapeit Drink](./Grapeit-drink) | Beverage brand landing page | — |
+| [City Explore](./city-explore) | City tourism UI page | — |
+
+</details>
 
 ---
 
 ## ⚡ JavaScript Projects
 
-Projects built to strengthen JavaScript concepts and problem-solving skills.
+> Interactive applications built to strengthen JS fundamentals.
 
-### Examples
+<details>
+<summary><b>View projects</b></summary>
 
-- Calculator
-- Guessing Game
-- Memory Game
-- Tic Tac Toe
-- Quiz App
-- Bouncing Ball
-- Interactive Applications
+<br/>
+
+| Project | Description | Live |
+|:---|:---|:---:|
+| [Calculator](./Calculator) | Functional calculator with keyboard support | — |
+| [Guessing Game](./Guessing-Game-JS) | Number guessing game with score tracking | — |
+| [Memory Game](./memory-game) | Classic card-flip memory game | — |
+| [Tic Tac Toe](./tic-tac-toe-game) | Two-player tic tac toe with win detection | — |
+| [Quiz App](./quiz-app) | Multiple choice quiz with score display | — |
+| [To-Do List](./To-do-list) | Task manager with add/delete/complete | — |
+| [Budget App](./budget-app) | Simple income & expense tracker | — |
+| [Weather Web](./Weather-web) | Weather app using a public API | — |
+| [Moon Tracker](./moon-tracker) | Tracks current moon phase | — |
+| [Bouncing Ball](./bouncing-ball) | Canvas animation — physics-based ball | — |
+| [Silly Story Generator](./silly-story-generator) | Random story builder with user input | — |
+| [Notes App](./notes) | In-browser notes with local persistence | — |
+
+</details>
 
 ---
 
 ## ⚛️ React Projects
 
-Projects created while learning and experimenting with React.
+> Components and apps built while learning React.
 
-### Examples
+<details>
+<summary><b>View projects</b></summary>
 
-- React Tic Tac Toe
-- React Components
-- State Management Practice
-- React UI Experiments
+<br/>
+
+| Project | Description | Live |
+|:---|:---|:---:|
+| [React Tic Tac Toe](./react-tic-tac-toe-fun) | Official React tutorial game — extended | — |
+| [React Tube Studio](./react-tube-studio) | YouTube-inspired video UI in React | — |
+| [AI Roster](./Ai-roster) | AI-powered roster/list manager | — |
+| [react_1](./react_1) | First React component experiments | — |
+
+</details>
 
 ---
 
 ## 🎨 UI Components & Animations
 
-Creative frontend experiments and reusable UI elements.
+> Creative frontend experiments and reusable visual elements.
 
-### Examples
+<details>
+<summary><b>View projects</b></summary>
 
-- Loading Animations
-- Scroll Animations
-- Animated Borders
-- Hover Effects
-- Interactive Components
-- Modern UI Designs
+<br/>
+
+| Project | Description |
+|:---|:---|
+| [Loading Animation](./loading-animation) | Smooth CSS loading spinner collection |
+| [Scroll Animation](./scroll-animation) | Elements that animate on scroll |
+| [CSS Animated Border](./css-animated-border) | Gradient animated border effect |
+| [Solar System](./solar-system) | CSS/JS animated solar system model |
+| [Snowman](./snowman) | Interactive animated snowman |
+| [Splash](./splash) | Liquid splash animation in CSS |
+| [Animation](./animation) | Miscellaneous CSS animation experiments |
+| [Image Gallery](./image-gallery) | Filterable image grid with lightbox |
+| [Music App](./music.app) | Music player UI with controls |
+
+</details>
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
 <div align="center">
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Structure |
-| CSS3 | Styling |
-| JavaScript | Interactivity |
-| React | Frontend Development |
-| Git | Version Control |
-| GitHub | Project Hosting |
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 </div>
 
 ---
 
-## 🎯 Learning Objectives
+## 📈 GitHub Stats
 
-This repository helps me practice:
+<div align="center">
 
-- Responsive Web Design
-- JavaScript Fundamentals
-- DOM Manipulation
-- UI/UX Design
-- Frontend Development
-- Component-Based Architecture
-- Git & GitHub Workflow
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=mhd-humraz&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mhd-humraz&layout=compact&theme=tokyonight&hide_border=true" />
+
+</div>
 
 ---
 
-## 📈 Development Journey
+## 🚀 Getting Started
 
-Every folder in this repository represents a milestone in my learning process.
+Clone the repo and open any project folder:
 
-Some projects may be simple, while others explore advanced concepts. Together, they showcase my growth as a developer and my commitment to continuous learning.
+```bash
+git clone https://github.com/mhd-humraz/mini-projects.git
+cd mini-projects
+
+# Navigate to any project
+cd Calculator
+open index.html        # macOS
+start index.html       # Windows
+xdg-open index.html    # Linux
+```
+
+> For React projects, `cd` into the folder and run `npm install && npm start`.
 
 ---
 
-## 🤝 Contributions
+## 🤝 Contributing
 
-Suggestions, improvements, and feedback are always welcome.
+Suggestions and feedback are always welcome!
 
-If you find something interesting or have ideas for improvement, feel free to open an issue or submit a pull request.
+1. Fork the repository
+2. Create a branch: `git checkout -b improve/project-name`
+3. Make your changes
+4. Open a pull request
+
+Or simply [open an issue](https://github.com/mhd-humraz/mini-projects/issues) if you spot something.
 
 ---
 
-## 👨‍💻 Author
+## 📬 Connect With Me
 
-### Muhammed Humraz
+<div align="center">
 
-- 🎓 BCA Student
-- 🤖 AI & Computer Vision Enthusiast
-- 🌐 Web Developer
-- 🎨 Designer
-- 🚀 Technology Explorer
+[![GitHub](https://img.shields.io/badge/GitHub-mhd--humraz-181717?style=for-the-badge&logo=github)](https://github.com/mhd-humraz)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/mhd-humraz)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://mhd-humraz.github.io)
 
-### Connect With Me
-
-- GitHub: https://github.com/mhd-humraz
+</div>
 
 ---
 
 <div align="center">
 
-### ⭐ If you like this repository, consider giving it a star.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
+
+**⭐ If this repo helped or inspired you, a star would mean a lot!**
 
 *"Small projects build big skills."*
+
+</div> build big skills."*
 
 </div>

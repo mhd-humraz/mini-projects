@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Amazing Girlfriend</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px 0;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .heart {
+            color: #ff1493;
+            font-size: 1.5em;
+            animation: beat 1s infinite alternate;
+        }
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+        .message {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+.photo-slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.photo-slideshow img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .photo-grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff1493;
+.reasons-list li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInList 0.8s ease forwards;
+}
+
+.reasons-list li:nth-child(1) { animation-delay: 0.3s; }
+.reasons-list li:nth-child(2) { animation-delay: 0.6s; }
+.reasons-list li:nth-child(3) { animation-delay: 0.9s; }
+.reasons-list li:nth-child(4) { animation-delay: 1.2s; }
+.reasons-list li:nth-child(5) { animation-delay: 1.5s; }
+/* Add more if needed */
+
+@keyframes fadeInList {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        }
+        footer {
+            margin-top: 40px;
+            color: #ff69b4;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>For My Beautiful <span class="heart">👸🏻</span> princess shahina</h1>
+            <p>You make every day brighter</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="message">
+            <h2>To the Love of My Life</h2>
+            <p>From the moment I met you, my world changed for the better. Your smile lights up my darkest days, your laugh is my favorite sound, and your love is my greatest treasure.</p>
+            <p>I created this little page to remind you of how special you are to me and all the reasons why I love you so much.</p>
+            <p>Always remember: You are amazing, you are loved, and you make my life complete.</p>
+            <p>With all my heart,</p>
+            <p><strong>humraz</strong></p>
+        </div>
+
+       <h2>Our Happy Memories</h2>
+              <div class="photo-slideshow">
+ 
+         <img id="slideshow" src="image/photo1.jpg" alt="Our memory">
+       
+        
+
+        </div>
+
+
+        <h2>Reasons Why I Love You</h2>
+       <div class="message">
+
+            <ul style="text-align: left;">
+
+                <li>Your kind heart that cares for everyone</li>
+
+                <li> The way you always find a way to cheer me up</li>
+
+                <li>Your beautiful eyes that tell a story</li>
+
+                <li>How safe I feel when I'm with you</li>
+
+                <li>Your amazing talent for making everything better</li>
+
+
+   <li>The way you believe in me when I doubt myself</li>
+
+                              <!-- Add more personalized reasons -->
+ 
+           </ul>
+        <div>
+
+            <button onclick="showSurprise()">Click for a Surprise!</button>
+            <button onclick="showLove()">Why I Love You</button>
+        </div>
+
+        
+    </div>
+
+    <script>
+        function showSurprise() {
+            alert("I love you more than words can say! ??");
+            // You can replace this with something more elaborate
+        }
+const slideshowImages = [
+    "image/photo1.jpg",
+    "image/photo2.jpg",
+    "image/photo3.jpg",
+    "image/photo4.jpg",
+    "image/photo5.jpg",
+    "image/photo6.jpg"
+];
+
+let currentImageIndex = 0;
+const slideshow = document.getElementById('slideshow');
+
+function changePhoto() {
+    currentImageIndex = (currentImageIndex + 1) % slideshowImages.length;
+    slideshow.style.opacity = 0; // Fade out
+    setTimeout(() => {
+        slideshow.src = slideshowImages[currentImageIndex];
+        slideshow.style.opacity = 1; // Fade in
+        slideshow.style.animation = 'slideUp 1s ease';
+    }, 500);
+}
+
+setInterval(changePhoto, 3000); // Change photo every 3 seconds
+
+        function showLove() {
+            const reasons = [
+                "Your smile brightens my day",
+                "The way you care for others inspires me",
+                "You understand me like no one else",
+                "Your laugh is contagious",
+                "You make ordinary moments special",
+                "Your strength amazes me every day"
+                // Add more reasons
+            ];
+            const randomReason = reasons[Math.floor(Math.random() * reasons.length)];
+            alert(randomReason + " ??");
+        }
+    </script>
+</body>
+</html>

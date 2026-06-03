@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sequencing Animations 🎬⚡</title>
+ <link rel="stylesheet" href="style.css" />
+   
+</head>
+<body>
+  <h1>Sequencing Animations</h1>
+  <p>Click the button to see the animations play one after another 👇</p>
+
+  <button id="start">Start Animation</button>
+
+  <div class="container">
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+  </div>
+
+  <script>
+    const boxes = document.querySelectorAll('.box');
+    const startBtn = document.getElementById('start');
+
+    // Animate one box and return a Promise
+    function animateBox(box, delay) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          box.classList.add('animate');
+          setTimeout(() => {
+            box.classList.remove('animate');
+            resolve();
+          }, 600); // animation duration
+        }, delay);
+      });
+    }
+
+    // Sequential animation using async/await
+    async function playSequence() {
+      startBtn.disabled = true;
+      for (let i = 0; i < boxes.length; i++) {
+        await animateBox(boxes[i], 300);
+      }
+      startBtn.disabled = false;
+    }
+
+    startBtn.addEventListener('click', playSequence);
+  </script>
+</body>
+</html>

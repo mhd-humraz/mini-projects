@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match Game</title>
+  <link rel="stylesheet" href="memory.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Memory Match</h1>
+    
+    <!-- Customization Panel -->
+    <div class="customization-panel">
+      <div class="customization-option">
+        <label for="theme">Theme:</label>
+        <select id="theme">
+          <option value="animals">Animals</option>
+          <option value="fruits">Fruits</option>
+          <option value="vehicles">Vehicles</option>
+          <option value="emoji">Emoji</option>
+        </select>
+      </div>
+      
+      <div class="customization-option">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy (4 pairs)</option>
+          <option value="medium" selected>Medium (8 pairs)</option>
+          <option value="hard">Hard (12 pairs)</option>
+        </select>
+      </div>
+      
+      <div class="customization-option">
+        <label for="card-style">Card Style:</label>
+        <select id="card-style">
+          <option value="rounded">Rounded</option>
+          <option value="square">Square</option>
+          <option value="circle">Circular</option>
+        </select>
+      </div>
+      
+      <div class="customization-option">
+        <label for="animation-speed">Animation Speed:</label>
+        <select id="animation-speed">
+          <option value="slow">Slow</option>
+          <option value="normal" selected>Normal</option>
+          <option value="fast">Fast</option>
+        </select>
+      </div>
+      
+      <button id="start-game">Start Game</button>
+    </div>
+    
+    <!-- Game Area (hidden initially) -->
+    <div class="game-area hidden">
+      <div class="game-info">
+        <div class="moves">Moves: <span id="moves">0</span></div>
+        <div class="timer">Time: <span id="timer">0</span>s</div>
+        <button id="restart">Restart</button>
+      </div>
+      <div class="game-board"></div>
+      <div class="win-message hidden">
+        <h2>You Won!</h2>
+        <p>It took you <span id="final-moves">0</span> moves and <span id="final-time">0</span> seconds.</p>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+  </div>
+  <script src="memory.js"></script>
+</body>
+</html>

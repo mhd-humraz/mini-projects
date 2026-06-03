@@ -1,0 +1,235 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+/* Base styles remain the same as before */
+
+/* Add these new styles */
+.customization-panel {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.customization-option {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.customization-option label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.customization-option select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Card Styles */
+.card.rounded .card-front,
+.card.rounded .card-back {
+  border-radius: 10px;
+}
+
+.card.square .card-front,
+.card.square .card-back {
+  border-radius: 0;
+}
+
+.card.circle .card-front,
+.card.circle .card-back {
+  border-radius: 50%;
+}
+
+/* Animation Speeds */
+.card.slow .card-inner {
+  transition: transform 1s;
+}
+
+.card.normal .card-inner {
+  transition: transform 0.5s;
+}
+
+.card.fast .card-inner {
+  transition: transform 0.2s;
+}
+
+/* Themes */
+.theme-animals .card-back {
+  background-color: #ffcc99;
+}
+
+.theme-fruits .card-back {
+  background-color: #ccff99;
+}
+
+.theme-vehicles .card-back {
+  background-color: #99ccff;
+}
+
+.theme-emoji .card-back {
+  background-color: #ffccff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .customization-panel {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .customization-option {
+    width: 100%;
+  }
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  perspective: 600px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+  background: #2c3e50;
+  color: white;
+}
+
+.card-back {
+  background: #f8f8f8;
+  transform: rotateY(180deg);
+  color: #2c3e50;
+}
+
+.win-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 100;
+}
+
+.win-message h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.win-message p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .game-board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+}

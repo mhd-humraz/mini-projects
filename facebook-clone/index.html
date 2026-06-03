@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <img src="logo.png" alt="Facebook Logo" class="logo">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search Facebook">
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <div class="icon-button active-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="icon-button">
+                <i class="fas fa-tv"></i>
+            </div>
+            <div class="icon-button">
+                <i class="fas fa-store"></i>
+            </div>
+            <div class="icon-button">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="icon-button">
+                <i class="fas fa-gamepad"></i>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <div class="icon-button">
+                <i class="fas fa-bell"></i>
+            </div>
+            <div class="icon-button">
+                <i class="fas fa-comment-dots"></i>
+            </div>
+            <div class="icon-button">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="profile-pic">
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="sidebar-item">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile">
+                <span>John Doe</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-user-friends"></i>
+                <span>Friends</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-history"></i>
+                <span>Memories</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-bookmark"></i>
+                <span>Saved</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-flag"></i>
+                <span>Pages</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Events</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-users"></i>
+                <span>Groups</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-video"></i>
+                <span>Watch</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Marketplace</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-heart"></i>
+                <span>Fundraisers</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-star"></i>
+                <span>Favorites</span>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="sidebar-title">Your Shortcuts</div>
+            
+            <div class="sidebar-item">
+                <img src="https://picsum.photos/200" alt="Group">
+                <span>Tech Enthusiasts</span>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://picsum.photos/201" alt="Group">
+                <span>Travel Lovers</span>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://picsum.photos/202" alt="Group">
+                <span>Cooking Club</span>
+            </div>
+        </div>
+        
+        <!-- Main Feed -->
+        <div class="main-content">
+            <!-- Stories Section -->
+            <div class="story-section">
+                <div class="story create-story">
+                    <div style="background-color: #f0f2f5; height: 100%; position: relative;">
+                        <div class="create-story-icon">
+                            <i class="fas fa-plus" style="color: white;"></i>
+                        </div>
+                        <div class="create-story-text">Create Story</div>
+                    </div>
+                </div>
+                
+                <div class="story">
+                    <img src="https://picsum.photos/500/300?random=1" alt="Story">
+                    <div class="story-user">Alex Johnson</div>
+                </div>
+                
+                <div class="story">
+                    <img src="https://picsum.photos/500/300?random=2" alt="Story">
+                    <div class="story-user">Sarah Miller</div>
+                </div>
+                
+                <div class="story">
+                    <img src="https://picsum.photos/500/300?random=3" alt="Story">
+                    <div class="story-user">Mike Chen</div>
+                </div>
+                
+                <div class="story">
+                    <img src="https://picsum.photos/500/300?random=4" alt="Story">
+                    <div class="story-user">Emma Wilson</div>
+                </div>
+            </div>
+            
+            <!-- Create Post -->
+            <div class="create-post">
+                <div class="post-input">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile">
+                    <input type="text" placeholder="What's on your mind?">
+                </div>
+                
+                <div class="post-options">
+                    <div class="post-option live-video">
+                        <i class="fas fa-video"></i>
+                        <span>Live video</span>
+                    </div>
+                    <div class="post-option photo-video">
+                        <i class="fas fa-images"></i>
+                        <span>Photo/video</span>
+                    </div>
+                    <div class="post-option feeling">
+                        <i class="fas fa-smile"></i>
+                        <span>Feeling/activity</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Posts -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile">
+                    <div>
+                        <div class="post-user">Jennifer Lopez</div>
+                        <div class="post-time">Yesterday at 3:45 PM · <i class="fas fa-globe-americas"></i></div>
+                    </div>
+                    <div class="post-more">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                
+                <div class="post-content">
+                    Just got back from an amazing vacation in Hawaii! The beaches were incredible and the sunsets were breathtaking. Can't wait to go back!
+                </div>
+                
+                <img src="https://picsum.photos/600/400?random=5" alt="Post" class="post-image">
+                
+                <div class="post-stats">
+                    <div>
+                        <i class="fas fa-thumbs-up"></i> 245
+                    </div>
+                    <div>
+                        48 comments · 12 shares
+                    </div>
+                </div>
+                
+                <div class="post-actions">
+                    <div class="post-action">
+                        <i class="far fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-action">
+                        <i class="far fa-comment"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-action">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Profile">
+                    <div>
+                        <div class="post-user">David Wilson</div>
+                        <div class="post-time">2 hrs ago · <i class="fas fa-user-friends"></i></div>
+                    </div>
+                    <div class="post-more">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                
+                <div class="post-content">
+                    Check out this amazing recipe I tried today! Perfect for summer gatherings.
+                </div>
+                
+                <img src="https://picsum.photos/600/400?random=6" alt="Post" class="post-image">
+                
+                <div class="post-stats">
+                    <div>
+                        <i class="fas fa-thumbs-up"></i> 132
+                    </div>
+                    <div>
+                        28 comments · 5 shares
+                    </div>
+                </div>
+                
+                <div class="post-actions">
+                    <div class="post-action">
+                        <i class="far fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-action">
+                        <i class="far fa-comment"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-action">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="birthday">
+                <i class="fas fa-birthday-cake"></i>
+                <div>
+                    <strong>John Smith</strong> and <strong>3 others</strong> have birthdays today.
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="sponsored">Sponsored</div>
+            
+            <div style="margin-bottom: 16px;">
+                <img src="https://picsum.photos/300/200?random=7" alt="Ad" style="width: 100%; border-radius: 8px; margin-bottom: 8px;">
+                <div style="font-weight: 600; margin-bottom: 4px;">Try our new product today!</div>
+                <div style="color: #65676b; font-size: 14px;">example.com</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="contacts">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="font-weight: 600; color: #65676b;">Contacts</div>
+                    <div>
+                        <i class="fas fa-video" style="margin-right: 12px; color: #65676b;"></i>
+                        <i class="fas fa-search" style="margin-right: 12px; color: #65676b;"></i>
+                        <i class="fas fa-ellipsis-h" style="color: #65676b;"></i>
+                    </div>
+                </div>
+                
+                <div class="contact">
+                    <div style="position: relative;">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Profile">
+                        <div class="online-indicator"></div>
+                    </div>
+                    <span>Emily Johnson</span>
+                </div>
+                
+                <div class="contact">
+                    <div style="position: relative;">
+                        <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Profile">
+                        <div class="online-indicator"></div>
+                    </div>
+                    <span>Michael Brown</span>
+                </div>
+                
+                <div class="contact">
+                    <div style="position: relative;">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Profile">
+                        <div class="online-indicator"></div>
+                    </div>
+                    <span>Sarah Wilson</span>
+                </div>
+                
+                <div class="contact">
+                    <div style="position: relative;">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Profile">
+                        <div class="online-indicator"></div>
+                    </div>
+                    <span>Robert Davis</span>
+                </div>
+                
+                <div class="contact">
+                    <div style="position: relative;">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Profile">
+                        <div class="online-indicator"></div>
+                    </div>
+                    <span>Jessica Martinez</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Simple JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Like button functionality
+            const likeButtons = document.querySelectorAll('.post-action:first-child');
+            likeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.style.color = '#1877f2';
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.style.color = '';
+                    }
+                });
+            });
+            
+            // Navigation icons hover effect
+            const navIcons = document.querySelectorAll('.icon-button');
+            navIcons.forEach(icon => {
+                icon.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('active-icon')) {
+                        this.style.backgroundColor = '#f0f2f5';
+                    }
+                });
+                
+                icon.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('active-icon')) {
+                        this.style.backgroundColor = '';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
